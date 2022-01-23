@@ -9,9 +9,8 @@ const Post = () => {
   const [post, setPost] = useState({})
 
   useEffect (() => {
-    busca(`/posts/${id}`, setPost)
-    .catch(() => {
-      history.push('/404')
+    busca(`/posts/${id}`, setPost).catch(() => {
+      history.push("/404") 
     })
   }, [id])
 
